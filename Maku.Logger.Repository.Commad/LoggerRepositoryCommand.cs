@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Data;
-using System.Data.Common;
+using System.Data.SqlClient;
 using System.IO;
 using System.Text;
 using Maku.Logger.Repository.Interfaces.Commad;
@@ -15,20 +15,26 @@ namespace Maku.Logger.Repository.Commad
     {
         public void LogToDatabase(Message message)
         {
-            //using (var command = Database.CreateConnection().CreateCommand())
-            //{
-            //    command.CommandType = CommandType.Text;
-            //    command.CommandText = "Insert Into LoggerTest values (@messageType, @createdBy, @description, @creationDate)";
-            //}
-
-            using (DbCommand command = Database.GetStoredProcCommand(Constants.Procedures.UspInsertLogger))
+            using (var command = Database.CreateConnection().CreateCommand())
             {
-                Database.AddInParameter(command, "@messageType", SqlDbType.VarChar, message.LoggerSeverity);
-                Database.AddInParameter(command, "@createdBy", SqlDbType.VarChar, message.CreatedBy);
-                Database.AddInParameter(command, "@description", SqlDbType.VarChar, message.Description);
-                Database.AddInParameter(command, "@creationDate", SqlDbType.DateTime, message.CreationDate);
-                Database.ExecuteNonQuery(command);
+                command.CommandType = CommandType.Text;
+                command.CommandText = "Insert Into LoggerTest (messageType, createdBy, description, creationDate) values (@messageType, @createdBy, @description, @creationDate)";
+                command.Parameters.Add(new SqlParameter { ParameterName = "@messageType", SqlDbType = SqlDbType.VarChar,  Value = message.LoggerSeverity });
+                command.Parameters.Add(new SqlParameter { ParameterName = "@createdBy", SqlDbType = SqlDbType.VarChar,  Value = message.LoggerSeverity });
+                command.Parameters.Add(new SqlParameter { ParameterName = "@description", SqlDbType = SqlDbType.VarChar,  Value = message.LoggerSeverity });
+                command.Parameters.Add(new SqlParameter { ParameterName = "@creationDate", SqlDbType = SqlDbType.DateTime,  Value = message.LoggerSeverity });
+
+                command.ExecuteNonQuery();
             }
+            
+            //using (DbCommand command = Database.GetStoredProcCommand(Constants.Procedures.UspInsertLogger))
+            //{
+            //    Database.AddInParameter(command, "@messageType", SqlDbType.VarChar, message.LoggerSeverity);
+            //    Database.AddInParameter(command, "@createdBy", SqlDbType.VarChar, message.CreatedBy);
+            //    Database.AddInParameter(command, "@description", SqlDbType.VarChar, message.Description);
+            //    Database.AddInParameter(command, "@creationDate", SqlDbType.DateTime, message.CreationDate);
+            //    Database.ExecuteNonQuery(command);
+            //}
         }
 
         public void LogToFile(Message message)
@@ -36,8 +42,8 @@ namespace Maku.Logger.Repository.Commad
             var filePath = ConfigurationManager.AppSettings["LogFileDirectory"];
             var fullPath = string.Concat(filePath, message.CreatedBy, Constants.Extension);
             Directory.CreateDirectory(filePath);
-
-            var messageTypeName = GetLogTypeName(message.LoggerSeverity);
+            
+            var messageTypeName = Util.GetLogTypeName(message.LoggerSeverity);
             if (!File.Exists(fullPath))
             {
                 using (var sw = File.CreateText(fullPath))
@@ -66,7 +72,7 @@ namespace Maku.Logger.Repository.Commad
 
         public void LogToConsole(Message message)
         {
-            var messageTypeName = GetLogTypeName(message.LoggerSeverity);
+            var messageTypeName = Util.GetLogTypeName(message.LoggerSeverity);
             var sb = new StringBuilder();
             sb.AppendLine(Constants.LoggerBody.LoggerBegin);
             sb.AppendLine(string.Format(Constants.LoggerBody.LoggerCreatedBy, message.CreatedBy));
@@ -82,20 +88,6 @@ namespace Maku.Logger.Repository.Commad
             }
 
             Console.WriteLine(sb);
-        }
-
-        public string GetLogTypeName(int id)
-        {
-            var logTypeName = string.Empty;
-
-            switch (id)
-            {
-                case 1: logTypeName = "MESSAGE"; break;
-                case 2: logTypeName = "WARNING"; break;
-                case 3: logTypeName = "ERROR"; break;
-            }
-
-            return logTypeName;
         }
     }
 }

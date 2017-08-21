@@ -16,7 +16,7 @@ namespace Maku.Logger.Console
             
             var loggerSample = container.Resolve<ILoggerServiceCommand>();
 
-            loggerSample.Error("demo", "makubex");
+            loggerSample.Warning("demo warning", "maku");
             System.Console.ReadLine();
         }
     }

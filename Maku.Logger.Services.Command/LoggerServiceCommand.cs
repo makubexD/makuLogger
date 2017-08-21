@@ -77,7 +77,6 @@ namespace Maku.Logger.Services.Command
         {
             if (_logToDatabase)
                 _loggerRepositoryCommand.LogToDatabase(message);
-            
 
             if (_logToConsole)
                 _loggerRepositoryCommand.LogToConsole(message);

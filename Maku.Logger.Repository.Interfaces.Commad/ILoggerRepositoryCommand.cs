@@ -7,6 +7,5 @@ namespace Maku.Logger.Repository.Interfaces.Commad
         void LogToDatabase(Message message);
         void LogToFile(Message message);
         void LogToConsole(Message message);
-        string GetLogTypeName(int id);
     }
 }

@@ -39,7 +39,7 @@ namespace Maku.Logger.Console
         {
             try
             {
-                return this._container.Resolve(serviceType);
+                return _container.Resolve(serviceType);
             }
             catch (ResolutionFailedException)
             {
@@ -51,7 +51,7 @@ namespace Maku.Logger.Console
         {
             try
             {
-                return this._container.ResolveAll(serviceType);
+                return _container.ResolveAll(serviceType);
             }
             catch (ResolutionFailedException)
             {
