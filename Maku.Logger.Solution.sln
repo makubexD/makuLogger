@@ -1,0 +1,146 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maku.Logger.Client", "Maku.Logger.Client\Maku.Logger.Client.csproj", "{E4D14344-F5EC-4BBA-AADF-CE1F76BCB21E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Presentation Layer", "1. Presentation Layer", "{B0F06295-41A7-4433-A734-84F04D739308}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Application Layer", "2. Application Layer", "{371908B6-1CEE-460C-9CC3-1F95FD6F851E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maku.Logger.Console", "Maku.Logger.Console\Maku.Logger.Console.csproj", "{F5B0DAD4-7AA9-45D5-84B9-F98BDB51ED50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maku.Logger.Application.Services.WebApi", "Maku.Logger.Application.Services.WebApi\Maku.Logger.Application.Services.WebApi.csproj", "{649B223A-5530-4DE7-A825-D3DF23148F29}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Domain Layer", "3. Domain Layer", "{86E9EC5E-2853-4F2D-A93F-AEFC9850F114}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maku.Logger.CommandModel", "Maku.Logger.CommandModel\Maku.Logger.CommandModel.csproj", "{3F90B54F-D252-441D-8D44-2F3E5E856E49}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Infrastructure Layer", "4. Infrastructure Layer", "{1ACBBC0D-B982-417C-8D05-0D27F2F62A16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maku.Logger.Repository.Commad", "Maku.Logger.Repository.Commad\Maku.Logger.Repository.Commad.csproj", "{74173DB3-1256-48B7-B6CE-BFCEE96A0CFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maku.Logger.Repository.Interfaces.Commad", "Maku.Logger.Repository.Interfaces.Commad\Maku.Logger.Repository.Interfaces.Commad.csproj", "{125A09FB-7A17-4A03-B8AB-E278C33269FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Cross-cutting Layer", "5. Cross-cutting Layer", "{40B27D5D-2C35-4F5A-BD69-DC66680DE4E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maku.Logger.Resources", "Maku.Logger.Resources\Maku.Logger.Resources.csproj", "{88CC7AEB-929F-4B35-A8A1-93ECBDD836FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6. Tests", "6. Tests", "{C312D87E-9728-4E80-88C5-6E15DC1941F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maku.Logger.Services.Command", "Maku.Logger.Services.Command\Maku.Logger.Services.Command.csproj", "{4EA53B51-B850-4ECA-8CE5-8E96E52ABE34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7. Frameworks", "7. Frameworks", "{AF803711-D19D-44E7-BCEA-0D60491D8F49}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7.1 Repository", "7.1 Repository", "{72301FBE-2740-4DE3-AE86-101055936441}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maku.Logger.Repository.Native", "Maku.Logger.Repository.Native\Maku.Logger.Repository.Native.csproj", "{9D6F6ADB-7E6B-4963-8F7D-A8B34D200B53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maku.Logger.Common", "Maku.Logger.Common\Maku.Logger.Common.csproj", "{659B1E08-AFF4-4DFC-8943-35BFA4D7B736}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maku.Logger.Services.Interfaces.Command", "Maku.Logger.Services.Interfaces.Command\Maku.Logger.Services.Interfaces.Command.csproj", "{A9EAC15F-1B5E-4655-BAD4-D311DA1EEB05}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7.2 Entities", "7.2 Entities", "{A2875ACC-F0CA-4CB8-B5A7-B1F94A8A3292}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maku.Logger.Entities", "Maku.Logger.Entities\Maku.Logger.Entities.csproj", "{B173A362-5BDC-482B-B2D8-4BDE57A6C3F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maku.Logger.Application.Dto", "Maku.Logger.Application.Dto\Maku.Logger.Application.Dto.csproj", "{1C040E44-5670-4B98-98AF-65664C6B5637}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maku.Logger.Services.Command.Test", "Maku.Logger.Services.Command.Test\Maku.Logger.Services.Command.Test.csproj", "{2275BEE6-856B-4537-BC56-DCE6708114DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maku.Logger.Services.Command.Test.Mock", "Maku.Logger.Services.Command.Test.Mock\Maku.Logger.Services.Command.Test.Mock.csproj", "{80C7D72E-E899-4842-8C83-A2EDAA516228}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4D14344-F5EC-4BBA-AADF-CE1F76BCB21E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4D14344-F5EC-4BBA-AADF-CE1F76BCB21E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4D14344-F5EC-4BBA-AADF-CE1F76BCB21E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4D14344-F5EC-4BBA-AADF-CE1F76BCB21E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5B0DAD4-7AA9-45D5-84B9-F98BDB51ED50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5B0DAD4-7AA9-45D5-84B9-F98BDB51ED50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5B0DAD4-7AA9-45D5-84B9-F98BDB51ED50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5B0DAD4-7AA9-45D5-84B9-F98BDB51ED50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{649B223A-5530-4DE7-A825-D3DF23148F29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{649B223A-5530-4DE7-A825-D3DF23148F29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{649B223A-5530-4DE7-A825-D3DF23148F29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{649B223A-5530-4DE7-A825-D3DF23148F29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F90B54F-D252-441D-8D44-2F3E5E856E49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F90B54F-D252-441D-8D44-2F3E5E856E49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F90B54F-D252-441D-8D44-2F3E5E856E49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F90B54F-D252-441D-8D44-2F3E5E856E49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74173DB3-1256-48B7-B6CE-BFCEE96A0CFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74173DB3-1256-48B7-B6CE-BFCEE96A0CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74173DB3-1256-48B7-B6CE-BFCEE96A0CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74173DB3-1256-48B7-B6CE-BFCEE96A0CFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{125A09FB-7A17-4A03-B8AB-E278C33269FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{125A09FB-7A17-4A03-B8AB-E278C33269FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{125A09FB-7A17-4A03-B8AB-E278C33269FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{125A09FB-7A17-4A03-B8AB-E278C33269FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88CC7AEB-929F-4B35-A8A1-93ECBDD836FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88CC7AEB-929F-4B35-A8A1-93ECBDD836FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88CC7AEB-929F-4B35-A8A1-93ECBDD836FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88CC7AEB-929F-4B35-A8A1-93ECBDD836FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EA53B51-B850-4ECA-8CE5-8E96E52ABE34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EA53B51-B850-4ECA-8CE5-8E96E52ABE34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EA53B51-B850-4ECA-8CE5-8E96E52ABE34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EA53B51-B850-4ECA-8CE5-8E96E52ABE34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D6F6ADB-7E6B-4963-8F7D-A8B34D200B53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D6F6ADB-7E6B-4963-8F7D-A8B34D200B53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D6F6ADB-7E6B-4963-8F7D-A8B34D200B53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D6F6ADB-7E6B-4963-8F7D-A8B34D200B53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{659B1E08-AFF4-4DFC-8943-35BFA4D7B736}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{659B1E08-AFF4-4DFC-8943-35BFA4D7B736}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{659B1E08-AFF4-4DFC-8943-35BFA4D7B736}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{659B1E08-AFF4-4DFC-8943-35BFA4D7B736}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9EAC15F-1B5E-4655-BAD4-D311DA1EEB05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9EAC15F-1B5E-4655-BAD4-D311DA1EEB05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9EAC15F-1B5E-4655-BAD4-D311DA1EEB05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9EAC15F-1B5E-4655-BAD4-D311DA1EEB05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B173A362-5BDC-482B-B2D8-4BDE57A6C3F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B173A362-5BDC-482B-B2D8-4BDE57A6C3F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B173A362-5BDC-482B-B2D8-4BDE57A6C3F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B173A362-5BDC-482B-B2D8-4BDE57A6C3F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C040E44-5670-4B98-98AF-65664C6B5637}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C040E44-5670-4B98-98AF-65664C6B5637}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C040E44-5670-4B98-98AF-65664C6B5637}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C040E44-5670-4B98-98AF-65664C6B5637}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2275BEE6-856B-4537-BC56-DCE6708114DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2275BEE6-856B-4537-BC56-DCE6708114DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2275BEE6-856B-4537-BC56-DCE6708114DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2275BEE6-856B-4537-BC56-DCE6708114DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80C7D72E-E899-4842-8C83-A2EDAA516228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80C7D72E-E899-4842-8C83-A2EDAA516228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80C7D72E-E899-4842-8C83-A2EDAA516228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80C7D72E-E899-4842-8C83-A2EDAA516228}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E4D14344-F5EC-4BBA-AADF-CE1F76BCB21E} = {B0F06295-41A7-4433-A734-84F04D739308}
+		{F5B0DAD4-7AA9-45D5-84B9-F98BDB51ED50} = {B0F06295-41A7-4433-A734-84F04D739308}
+		{649B223A-5530-4DE7-A825-D3DF23148F29} = {371908B6-1CEE-460C-9CC3-1F95FD6F851E}
+		{3F90B54F-D252-441D-8D44-2F3E5E856E49} = {86E9EC5E-2853-4F2D-A93F-AEFC9850F114}
+		{74173DB3-1256-48B7-B6CE-BFCEE96A0CFA} = {1ACBBC0D-B982-417C-8D05-0D27F2F62A16}
+		{125A09FB-7A17-4A03-B8AB-E278C33269FF} = {1ACBBC0D-B982-417C-8D05-0D27F2F62A16}
+		{88CC7AEB-929F-4B35-A8A1-93ECBDD836FA} = {40B27D5D-2C35-4F5A-BD69-DC66680DE4E5}
+		{4EA53B51-B850-4ECA-8CE5-8E96E52ABE34} = {371908B6-1CEE-460C-9CC3-1F95FD6F851E}
+		{72301FBE-2740-4DE3-AE86-101055936441} = {AF803711-D19D-44E7-BCEA-0D60491D8F49}
+		{9D6F6ADB-7E6B-4963-8F7D-A8B34D200B53} = {72301FBE-2740-4DE3-AE86-101055936441}
+		{659B1E08-AFF4-4DFC-8943-35BFA4D7B736} = {40B27D5D-2C35-4F5A-BD69-DC66680DE4E5}
+		{A9EAC15F-1B5E-4655-BAD4-D311DA1EEB05} = {371908B6-1CEE-460C-9CC3-1F95FD6F851E}
+		{A2875ACC-F0CA-4CB8-B5A7-B1F94A8A3292} = {AF803711-D19D-44E7-BCEA-0D60491D8F49}
+		{B173A362-5BDC-482B-B2D8-4BDE57A6C3F1} = {A2875ACC-F0CA-4CB8-B5A7-B1F94A8A3292}
+		{1C040E44-5670-4B98-98AF-65664C6B5637} = {371908B6-1CEE-460C-9CC3-1F95FD6F851E}
+		{2275BEE6-856B-4537-BC56-DCE6708114DE} = {C312D87E-9728-4E80-88C5-6E15DC1941F2}
+		{80C7D72E-E899-4842-8C83-A2EDAA516228} = {C312D87E-9728-4E80-88C5-6E15DC1941F2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
+	EndGlobalSection
+EndGlobal
