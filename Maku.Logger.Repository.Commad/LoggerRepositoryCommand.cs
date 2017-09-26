@@ -17,12 +17,13 @@ namespace Maku.Logger.Repository.Commad
         {
             using (var command = Database.CreateConnection().CreateCommand())
             {
+                command.Connection.Open();
                 command.CommandType = CommandType.Text;
                 command.CommandText = "Insert Into LoggerTest (messageType, createdBy, description, creationDate) values (@messageType, @createdBy, @description, @creationDate)";
-                command.Parameters.Add(new SqlParameter { ParameterName = "@messageType", SqlDbType = SqlDbType.VarChar,  Value = message.LoggerSeverity });
-                command.Parameters.Add(new SqlParameter { ParameterName = "@createdBy", SqlDbType = SqlDbType.VarChar,  Value = message.LoggerSeverity });
-                command.Parameters.Add(new SqlParameter { ParameterName = "@description", SqlDbType = SqlDbType.VarChar,  Value = message.LoggerSeverity });
-                command.Parameters.Add(new SqlParameter { ParameterName = "@creationDate", SqlDbType = SqlDbType.DateTime,  Value = message.LoggerSeverity });
+                command.Parameters.Add(new SqlParameter { ParameterName = "@messageType", SqlDbType = SqlDbType.Int,  Value = message.LoggerSeverity });
+                command.Parameters.Add(new SqlParameter { ParameterName = "@createdBy", SqlDbType = SqlDbType.VarChar,  Value = message.CreatedBy });
+                command.Parameters.Add(new SqlParameter { ParameterName = "@description", SqlDbType = SqlDbType.VarChar,  Value = message.Description });
+                command.Parameters.Add(new SqlParameter { ParameterName = "@creationDate", SqlDbType = SqlDbType.DateTime,  Value = message.CreationDate });
 
                 command.ExecuteNonQuery();
             }
@@ -39,6 +40,9 @@ namespace Maku.Logger.Repository.Commad
 
         public void LogToFile(Message message)
         {
+            // https://quickio.net/
+            //https://designingefficientsoftware.wordpress.com/2011/03/03/efficient-file-io-from-csharp/
+
             var filePath = ConfigurationManager.AppSettings["LogFileDirectory"];
             var fullPath = string.Concat(filePath, message.CreatedBy, Constants.Extension);
             Directory.CreateDirectory(filePath);
